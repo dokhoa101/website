@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+        
+
+        <title>...</title>
+    </head>
+    <body>
+        
+        
+
+        <div class="app">
+            <div class="card mg-10" id="card1">
+                <div class="card__title">
+                    <div class="col_third" id="heart">	
+                        <i class="fa fa-heart fa-8x"></i>
+                    </div>
+                    <div class="card__title--name">
+                        <h1> Tối nai đi chơi khum </h1>
+                    </div>
+                </div>
+                <div class="button__list mt-10">
+                    <div class="row">
+                        <div class="col col-lg-6 mt-10">
+                            <div class="button button__message btnNo" onclick="showMess()">
+                                <span>  </span>
+                            </div>
+                        </div>
+                        <div class="col col-lg-6 mt-10">
+                            <div class="button button__subscribe btnNo" onclick="showMess1()">
+                                <span>  </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mg-10" id="card2" style="display: none;">
+                <div class="card mg-10">
+                    <div style="height: 30px;"></div>
+                    <div class="card__title--name">
+                        <h1> 
+                            <span style="color: #FFCCFF;">oki</span>
+                            <br> 7:00 nha <br>
+                            <img src="data:image/jpeg;base64,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"/>
+                        </h1> 
+                    </div>
+                    <!-- <div class="button__list mt-10">
+                        <div class="row">
+                            <div class="col col-lg-6 mt-10">
+                                <div class="button button__message1 btnNo" onclick="showMess2()">
+                                    <span>  </span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div> -->
+                    <div style="height: 30px;"></div>
+                </div>
+            </div>
+
+            <div class="card mg-10" id="card3" style="display: none;">
+                <div class="card mg-10">
+                    <div style="height: 30px;"></div>
+                    <div class="card__title--name">
+                        <h1> 
+                            <span style="color: red;">Ai cho???</span>
+                            
+                        </h1>
+                    </div>
+                    <div class="button__list mt-10">
+                        <div class="row">
+                            <div class="col col-lg-6 mt-10">
+                                <div class="button button__message1 btnNo" onclick="showMess2()">
+                                    <span>  </span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div style="height: 30px;"></div>
+                </div>
+            </div>
+
+            
+
+            
+        </div>
+
+        
+        
+        <script >
+            function showMess()
+            {
+                var elementIds = ["card1", "card2", "card3"];
+  
+                for (var i = 0; i < elementIds.length; i++) {
+                    var element = document.getElementById(elementIds[i]);
+                    element.style.display = 'none';
+                }
+
+                document.getElementById("card2").style.display = 'inline';
+            }
+
+            function showMess1()
+            {
+                var elementIds = ["card1", "card2", "card3"];
+  
+                for (var i = 0; i < elementIds.length; i++) {
+                    var element = document.getElementById(elementIds[i]);
+                    element.style.display = 'none';
+                }
+
+                document.getElementById("card3").style.display = 'inline';
+            }
+
+            function showMess2()
+            {
+                var elementIds = ["card1", "card2", "card3"];
+  
+                for (var i = 0; i < elementIds.length; i++) {
+                    var element = document.getElementById(elementIds[i]);
+                    element.style.display = 'none';
+                }
+
+                document.getElementById("card1").style.display = 'inline';
+                
+            }
+        </script>
+    </body>
+</html>
